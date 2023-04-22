@@ -16,7 +16,7 @@ int main(void)
 		while (d < 10)
 		{
 			c = 0;
-			while (d < 10)
+			while (c < 10)
 			{
 				if (c != d && d != e && d < c)
 				{
@@ -30,6 +30,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
+
 				c++;
 			}
 			d++;
