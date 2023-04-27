@@ -12,22 +12,29 @@
 int main(void)
 {
 	int i;
-	char a[] = "Fizz";
-	char b[] = "Buzz";
-	char ab[] = "FizzBuzz";
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i == 100)
-			printf("%s ", b);
+		if ((i % 3 == 0) && (i % 5 != 0))
+		{
+			printf("Fizz ");
+		}
+		else if ((i % 5 == 0) && (i % 3 != 0))
+		{
+			printf("Buzz ");
+		}
 		else if ((i % 3 == 0) && (i % 5 == 0))
-			printf("%s ", ab);
-		else if (i % 3 == 0)
-			printf("%s ", a);
-		else if (i % 5 == 0)
-			printf("%s ", b);
+		{
+			printf("FizzBuzz ");
+		}
 		else
+		{
 			printf("%d ", i);
+		}
+		if (i != 100)
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 	return (0);
